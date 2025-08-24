@@ -1,0 +1,36 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+
+<body>
+<div class="nav-content">
+    <nav>
+        {% if not user.is_authenticated %}
+            <a href="{% url 'register' %}">Register</a>
+            <a href="{% url 'login' %}">Login</a>
+        {% else %}
+            <a href="{% url 'search' %}">Search</a>
+            <a href="{% url 'logout' %}">Logout</a>
+        {% endif %}
+    </nav>
+</div>
+
+
+<main>
+    {% block content %}
+    {% endblock %}
+</main>
+
+<footer>
+    <p>All rights reserved.</p>
+</footer>
+
+</body>
+</html>
