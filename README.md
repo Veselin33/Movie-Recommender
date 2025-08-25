@@ -35,6 +35,7 @@ More features coming soon - Favorites, details & recommendations.
 1. Clone the repository:
     ```bash
     git clone https://github.com/Veselin33/Movie-Recommender.git
+   ```
     cd Movie-Recommender
 2. Create a virtual environment
     python -m venv .venv
