@@ -8,6 +8,10 @@ html, body {
 
 }
 
+ul {
+    list-style: none;
+}
+
 
 main {
     flex: 1;
@@ -15,29 +19,32 @@ main {
 
 nav {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     gap: 1em;
-    padding: 0.5em 1em;
+    padding: 1em 1em;
     background-color: #222;
     color: white;
     text-decoration: none;
 
 }
 
+.nav-left {
+    color: #ff4500;
+}
 
 
 a {
-    background-color: #999999;
+    background-color: #ff4500;
     padding: 0.4em;
     border-radius: 0.5em;
     color: #ffffff;
     text-decoration: none;
+    font-weight: bolder;
 }
 
 a:hover {
     text-decoration: underline;
 }
-
 
 
 .cr-container {
@@ -60,6 +67,7 @@ a:hover {
     color: #ffa500a3;
     font-weight: bolder;
 }
+
 .cr-container h1 {
     color: #ffa500;
 }
@@ -87,6 +95,7 @@ a:hover {
     border-radius: 0.5em;
 
 }
+
 .cr-container button:hover {
     background-color: #D4AC0D;
 }
@@ -136,35 +145,35 @@ a:hover {
 }
 
 
-.searching-results {
+.movies-results {
     background-color: rgba(153, 153, 153, 0.2);
     max-height: 70vh;
     overflow-y: auto;
     padding: 30px;
 }
 
-.searching-results h2 {
+.movies-results h2 {
     text-align: center;
     font-weight: bolder;
     color: white;
 }
 
-.searching-results::-webkit-scrollbar {
+.movies-results::-webkit-scrollbar {
     width: 12px;
 }
 
-.searching-results::-webkit-scrollbar-track {
+.movies-results::-webkit-scrollbar-track {
     background: #1e1e1e;
     border-radius: 10px;
 }
 
-.searching-results::-webkit-scrollbar-thumb {
+.movies-results::-webkit-scrollbar-thumb {
     background-color: #ff4500;
     border-radius: 10px;
 }
 
 
-.searching-results {
+.movies-results {
     scrollbar-width: thin;
     scrollbar-color: #ff4500 #1e1e1e;
 }
@@ -212,6 +221,45 @@ a:hover {
 .movie-card p {
     margin: 5px 0 0 0;
     color: #ccc;
+}
+
+
+.movie-detail {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    align-items: center;
+    margin: 4em auto;
+    background-color: #1a1a1a;
+    border-radius: 0.5em;
+    border: 2px solid #999999;
+    padding: 1em;
+
+}
+
+.movie-detail img {
+    border: 1px solid #D4AC0D;
+
+}
+
+.movie-detail h1 {
+    color: #ff4500;
+}
+
+.movie-detail p {
+    color: white;
+}
+
+.favorites {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    align-items: center;
+    margin: 4em auto;
+    background-color: #1a1a1a;
+    border-radius: 0.5em;
+    border: 2px solid #ffa500;
+    padding: 1em;
 }
 
 

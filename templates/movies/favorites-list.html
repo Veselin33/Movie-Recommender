@@ -1,0 +1,35 @@
+{% extends 'common/base.html' %}
+
+
+{% block content %}
+
+    <h1>My Favorite Movies</h1>
+    <div class="movies-results">
+
+        {% if favorites %}
+            <ul>
+                <div class="movies-grid">
+                    {% for movie in favorites %}
+                        <li>
+                            <div class="movie-card">
+                                <img src="{{ movie.poster_url }}">
+                                <h2>{{ movie.title }}</h2>
+                                <p>{{ movie.year }}</p>
+                                <hr>
+                                <form method="POST" action="{% url 'remove_favorite' movie.imdb_id %}">
+                                    {% csrf_token %}
+                                    <button type="submit">Remove</button>
+                                </form>
+                            </div>
+                        </li>
+                    {% endfor %}
+                </div>
+            </ul>
+
+        {% else %}
+            <p>You have no favorite movies yet.</p>
+        {% endif %}
+    </div>
+
+
+{% endblock %}

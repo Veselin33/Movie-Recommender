@@ -10,7 +10,7 @@
         </form>
     
         {% if movies %}
-            <div class="searching-results">
+            <div class="movies-results">
 
             <h2>Results for "{{ query }}"</h2>
             
@@ -23,6 +23,7 @@
                         {% endif %}
                         <strong>{{ movie.Title }}</strong>
                         <p>{{ movie.Year }}</p>
+                        <p><a href="{% url 'detail' movie.imdbID %}">View Details</a></p>
                     </div>
                     
                 {% endfor %}
