@@ -45,10 +45,11 @@ More features coming soon - Favorites, details & recommendations.
     # macOS/Linux
     source .venv/bin/activate
 
-3. pip install -r requirements.txt
+3. install requirements 
+    - pip install -r requirements.txt
 4. Apply Migrations
-    puthon manage.py migrate
+    - puthon manage.py migrate
 5. Run server
     - python manage.py runserver
 6. Open Browser at 
-    http://127.0.0.1:8000/
+    - http://127.0.0.1:8000/
