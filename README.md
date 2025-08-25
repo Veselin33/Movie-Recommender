@@ -38,7 +38,7 @@ More features coming soon - Favorites, details & recommendations.
    ```
     cd Movie-Recommender
 2. Create a virtual environment
-    python -m venv .venv
+    - python -m venv .venv
 
     # Windows
     .venv\Scripts\activate
